@@ -1,28 +1,55 @@
 # 🐱 Cat Recognition using Logistic Regression
 
-## Overview
+A complete implementation of **Logistic Regression from scratch** using **Python** and **NumPy** for binary image classification (Cat vs. Non-Cat).
 
-This project implements a **Logistic Regression** model from scratch using **Python** and **NumPy** to classify images as **Cat** or **Non-Cat**.
-
-The implementation follows the concepts taught in **Andrew Ng's Deep Learning Specialization**, demonstrating how a simple neural network can perform binary image classification without using machine learning frameworks such as Scikit-learn.
+This project was completed while studying the **Deep Learning Specialization** by **Prof. Andrew Ng** and demonstrates the core concepts behind the first neural network model without relying on machine learning libraries such as Scikit-learn.
 
 ---
 
-## Features
+# Project Overview
 
-- Logistic Regression implemented from scratch
-- Sigmoid activation function
-- Forward Propagation
-- Backward Propagation
-- Binary Cross-Entropy Loss
-- Gradient Descent Optimization
-- Prediction on unseen images
-- Training and testing accuracy evaluation
-- Fully vectorized implementation with NumPy
+The objective of this project is to build a binary image classifier capable of determining whether an image contains a **cat** or **not a cat**.
+
+The implementation includes every major component of logistic regression:
+
+- Data preprocessing
+- Parameter initialization
+- Forward propagation
+- Binary Cross-Entropy Cost Function
+- Backward propagation
+- Gradient Descent optimization
+- Prediction
+- Model evaluation
 
 ---
 
-## Technologies Used
+# Model Workflow
+
+## 1. Training Phase
+
+During training, the model starts by initializing the parameters (**weights** and **bias**). Training images are then passed through the model to generate predictions. The prediction error is measured using the cost function, and gradients are computed to update the parameters through **Gradient Descent**.
+
+![Training Phase](release/W2A2/images/image1.png)
+
+---
+
+## 2. Testing Phase
+
+Once training is complete, the learned parameters are applied to the test dataset. The model predicts labels for unseen images and compares them with the true labels to evaluate its performance.
+
+![Testing Phase](release/W2A2/images/image2.png)
+
+---
+
+## 3. Logistic Regression Architecture
+
+Each image is converted into a feature vector. Every feature contributes to the final prediction through a weighted sum. The sigmoid activation function converts this value into a probability between **0** and **1**, allowing the model to classify the image as **Cat** or **Non-Cat**.
+
+![Logistic Regression Architecture](release/W2A2/images/LogReg_kiank.png)
+
+---
+
+# Technologies Used
 
 - Python 3
 - NumPy
@@ -32,94 +59,113 @@ The implementation follows the concepts taught in **Andrew Ng's Deep Learning Sp
 
 ---
 
-## Project Structure
+# Repository Structure
 
 ```text
 Cat_recognition/
 │
-├── release/
-│   ├── W2A1/
-│   └── W2A2/
 ├── README.md
+│
+└── release/
+    ├── W2A1/
+    └── W2A2/
+        ├── Logistic_Regression_with_a_Neural_Network_Mindset.ipynb
+        ├── datasets/
+        ├── images/
+        │   ├── image1.png
+        │   ├── image2.png
+        │   └── LogReg_kiank.png
+        └── lr_utils.py
 ```
 
 ---
 
-## Learning Outcomes
+# Learning Outcomes
 
-This project helped me understand:
+Through this project, I gained practical experience with:
 
-- Binary Classification
 - Logistic Regression
-- Neural Network Fundamentals
+- Binary Classification
 - Sigmoid Activation Function
-- Cost Function
+- Forward Propagation
+- Backward Propagation
+- Binary Cross-Entropy Loss
 - Gradient Descent
-- Forward and Backward Propagation
-- Model Evaluation
+- Parameter Optimization
+- Image Classification
 - Vectorized Programming with NumPy
 
 ---
 
-## Results
+# Results
 
-| Metric | Performance |
-|--------|------------:|
+| Metric | Value |
+|---------|------:|
 | Training Accuracy | ~99% |
 | Test Accuracy | ~70% |
 
-The difference between training and testing accuracy highlights the importance of model generalization and avoiding overfitting.
+The difference between training and testing accuracy illustrates the importance of model generalization and highlights the possibility of overfitting on relatively small datasets.
 
 ---
 
-## Installation
+# Installation
 
-Clone the repository:
+Clone the repository
 
 ```bash
 git clone https://github.com/qais-altloa/Cat-recognition.git
 ```
 
-Move into the project folder:
+Move into the project directory
 
 ```bash
 cd Cat-recognition
 ```
 
-Install the required packages:
+Install the required libraries
 
 ```bash
 pip install numpy matplotlib h5py
 ```
 
-Run the notebook or Python script.
+Run the notebook
+
+```bash
+jupyter notebook
+```
+
+Open:
+
+```
+release/W2A2/Logistic_Regression_with_a_Neural_Network_Mindset.ipynb
+```
 
 ---
 
-## Course Information
+# Course Reference
 
-This project was completed while studying the **Deep Learning Specialization** by **Prof. Andrew Ng**.
+This implementation was completed while studying the **Deep Learning Specialization** by **Prof. Andrew Ng**.
 
-It is shared for educational purposes to demonstrate the concepts learned throughout the course.
+The repository is intended for educational purposes and demonstrates the concepts learned throughout the course.
 
 ---
 
-## Future Improvements
+# Future Improvements
 
-- Add regularization
+- Apply regularization techniques
 - Experiment with different learning rates
-- Test on larger datasets
-- Compare with Scikit-learn implementation
+- Train on larger image datasets
+- Compare the implementation with Scikit-learn
 - Extend the model to a multi-layer neural network
 
 ---
 
-## Author
+# Author
 
 **Qais Altloa**
 
 Computer Science Student
 
-Interested in Artificial Intelligence, Machine Learning, Deep Learning, and Data Science.
+Interested in Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, and Data Science.
 
 GitHub: https://github.com/qais-altloa
